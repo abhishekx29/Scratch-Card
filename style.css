@@ -64,3 +64,42 @@ canvas{
 canvas{
     touch-action: none;
 }
+
+/* Animated text */
+.color-animate {
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(
+        90deg,
+        #ff7a00,
+        #ffee00,
+        #33ff00,
+        #00eaff,
+        #0066ff,
+        #cc00ff
+    );
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    animation: colorChange 10s infinite linear, fadeSlide 2.5s ease-out;
+}
+
+/* Color shifting animation */
+@keyframes colorChange {
+    0% { background-position: 0%; }
+    100% { background-position: 500%; }
+}
+
+/* Fade + slide in */
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
