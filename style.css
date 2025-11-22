@@ -1,0 +1,58 @@
+body{
+    font-family: "montserrat", sans-serif;
+}
+.main-container{
+    display: flex;
+     padding: 24px 15px;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+}
+
+h2.main-heading{
+   font-size: 40px;
+   font-weight: bold    ;
+    border-left: 4px solid #ff4460;
+    padding: 8px 32px;
+    margin-top: 0px;
+    margin-bottom: 42px;
+    
+}
+.main-container h3{
+    font-weight: normal;
+}
+
+.scratch-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 100px;
+    background: lightblue;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    position:relative;
+    overflow: hidden;
+    
+}
+.scratch-card{
+    position:absolute;
+    inset:0;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+canvas{
+    position:absolute;
+    inset:0;
+    cursor: grabbing;
+    border-radius: 10px;
+}
+
+/* Prevent the browser from handling touch gestures on the canvas */
+canvas{
+    touch-action: none;
+}
