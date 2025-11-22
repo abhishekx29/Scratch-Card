@@ -2,7 +2,12 @@ let canvas = document.getElementById('scratch-card1');
 let context = canvas.getContext('2d');
 
 const init = () => {
-    context.fillStyle = 'red';
+    const img = new Image();
+    img.src = 'image/img.png'; // Replace with your image path or URL
+    img.onload = () => {
+        context.drawImage(img, 0, 0, canvas.width, canvas.height);
+    };
+    return; // Prevent fillRect from running
     context.fillRect(0, 0, canvas.width, canvas.height);
 };
 
