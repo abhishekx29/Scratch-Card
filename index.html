@@ -4,41 +4,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scratch Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1 style="background: linear-gradient(90deg, #ff00c3, #3e90e1); color: white; padding: 20px; border-radius: 10px; text-align: center;">
-        Scratch and Win
-      </h1>
-    </header>
-    <div class="main-container">
-      <h2 class="color-animate">Every Scratch is a Chance to Win Big!</h2>
+    <div class="bg-blob bg-blob--1"></div>
+    <div class="bg-blob bg-blob--2"></div>
+    <div class="bg-blob bg-blob--3"></div>
 
-
-    </div>
-
-    <div class="main-container">
-      <div>
-        
-      </div>
-      <header class="dynamic-header">
-        <h1>
-          <span style="color: #ff9800;">Scratch</span> &amp; <span style="color: #4caf50;">Win</span>
+    <div class="app">
+      <header class="hero">
+        <span class="badge">Limited Time</span>
+        <h1 class="hero-title">
+          <span class="hero-title__accent">Scratch</span> &amp; Win
         </h1>
-        <p class="subtitle">Unleash your luck – every scratch could reveal a big prize!</p>
+        <p class="hero-subtitle">
+          Every scratch is a chance to win big — reveal your prize below!
+        </p>
       </header>
 
-      <div class="scratch-container">
-        <div class="scratch-card">
-          <div class="code">Congratulations you won <br><span style="color: crimson;">Iphone 17 Pro</span></div>
-        </div>
-        <canvas id="scratch-card1" width="300" height="100"></canvas>
-      </div>
+      <main class="card-section">
+        <div class="prize-card">
+          <div class="prize-card__header">
+            <span class="prize-card__icon">🎁</span>
+            <h2>Your Prize Awaits</h2>
+          </div>
 
+          <div class="scratch-container">
+            <div class="scratch-card">
+              <div class="prize-reveal">
+                <span class="prize-label">Congratulations!</span>
+                <span class="prize-name">iPhone 17 Pro</span>
+              </div>
+            </div>
+            <canvas id="scratch-card1" width="380" height="140"></canvas>
+          </div>
+
+          <p class="scratch-hint">
+            <span class="scratch-hint__icon">✨</span>
+            Scratch the silver surface to reveal your reward
+          </p>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p>One scratch per user · Terms &amp; conditions apply</p>
+      </footer>
     </div>
-      
-    </div>
-    <script src="script.js"></script>
+
+  <script src="script.js"></script>
   </body>
 </html>
